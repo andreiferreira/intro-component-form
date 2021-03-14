@@ -1,43 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+
+
   <link rel="stylesheet" type="text/css" href="./src/css/style.css">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
+
   <title>Frontend Mentor | Intro component with sign up form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
-<body>
 
-  Learn to code by watching others
+<body class="container">
+  <main class="content">
+    
+    <section class="section-introduction">
+      <h1 class="section-introduction__title"> Learn to code by watching others</h1>
+      <p class="section-introduction__text">See how experienced developers solve problems in real-time. Watching scripted tutorials is great,  but understanding how developers think is invaluable. </p>
+    </section>
 
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
+    <section class="section-form">
+      <button class="section-form__button"><p>Try it free 7 days <span>then $20/mo. thereafter</span></p></button>
+      <div class="section-form__form">
+        <form class="section-form__form___inputs">
+          <input class="section-form__form___inputs____single-input" type="text" placeholder="First Name">
+          <input class="section-form__form___inputs____single-input" type="text" placeholder="Last Name">
+          <input class="section-form__form___inputs____single-input" type="email" placeholder="Email address">
+          <input class="section-form__form___inputs____single-input" type="password" placeholder="Password">
+        </form>
+        <button class="section-form__form___button-send">CLAIM YOUR FREE TRIAL</button>
+          <p class="section-form__form___text-disclaimer">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+      </div>
 
-  Try it free 7 days then $20/mo. thereafter
+    </section>
+  </main>
 
-  First Name 
-  Last Name 
-  Email Address
-  Password
 
-  Claim your free trial 
-
-  By clicking the button, you are agreeing to our Terms and Services
-  
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer>
 </body>
 <script src="./src/js/script.js"></script>
+
 </html>
