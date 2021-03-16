@@ -4,8 +4,9 @@ var email = document.querySelector("#input_email");
 var password = document.querySelector("#input_password");
 var form = document.querySelector(".section-form__form___inputs");
 var inputs = document.querySelectorAll(".section-form__form___inputs____single-input");
+var mensagemErro = document.querySelector(".section-form__form__text-error");
+
 var countErrors = 0;
-var mensagemErro;
 
 function validaForm(event){
 
@@ -15,10 +16,8 @@ function validaForm(event){
     if(password.value === "") mudaInput(password);
 
     if((countErrors > 0) && (mensagemErro === undefined)){
-        mensagemErro = document.createElement("p");
-        mensagemErro.textContent = "Por favor, preencha todos os campos";
+        mensagemErro.innerText = "Por favor, preencha todos os campos";
         mensagemErro.classList.add("mensagem-erro")
-        form.appendChild(mensagemErro);
     }
     inputs.forEach(input => input.addEventListener('click', function(){
         input.style.borderColor = "black";
