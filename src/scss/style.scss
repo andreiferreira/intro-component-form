@@ -1,74 +1,72 @@
-@import './normalize.scss';
-
+@import "./normalize.scss";
 
 $borda: 2px solid black;
+//medias querys
 $media768: 768px;
 $media830: 830px;
 $media992: 992px;
 $media1200: 1200px;
 
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-body{
+//mobile-first
+body {
     width: 100vw;
     height: auto;
     overflow-x: hidden;
-    background-image: url('../images/bg-intro-mobile.png');
+    background-image: url("../images/bg-intro-mobile.png");
     background-color: hsl(0, 100%, 74%) !important;
-    
 
-    p, h1{
-        font-family: 'Poppins', sans-serif;
+    p,
+    h1 {
+        font-family: "Poppins", sans-serif;
         font-size: 16px;
-
     }
 
-    h1{
+    h1 {
         font-size: 2em;
         font-weight: 0;
     }
 
-    p{
+    p {
         letter-spacing: 0.05em;
     }
-    
-
 }
 
-main{
+main {
     width: 100%;
     height: 90%;
     margin-top: 25%;
 
-    @media (min-width: $media768){
+    @media (min-width: $media768) {
         margin-top: 0%;
     }
 }
-
-.content{
+// all content
+.content {
     display: grid;
     grid-template-areas: "section-introduction", "form-signup";
     grid-template-columns: 100%;
     grid-template-rows: 60vh 125vh;
     justify-content: space-between;
 
-    
-    @media (min-width: $media768){
+    @media (min-width: $media768) {
         grid-template-columns: 45% 45%;
-        grid-template-rows: 95vh;  
+        grid-template-rows: 95vh;
     }
 
-    @media (min-width: $media992){
+    @media (min-width: $media992) {
         grid-template-rows: 100vh;
         justify-content: center;
     }
 }
 
-.section-introduction{
+//introductory text area
+.section-introduction {
     grid-area: section-introduction;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
@@ -76,57 +74,59 @@ main{
     flex-direction: column;
     height: 100%;
 
-    p, h1{
+    p,
+    h1 {
         text-align: center;
         color: white;
         margin-bottom: 10%;
     }
 
-    @media (min-width: $media768){
+    @media (min-width: $media768) {
         grid-column: 1 / 2;
         grid-column: 1 / 2;
         justify-content: center;
         align-items: center;
     }
 
-    @media(min-width: $media992){
+    @media (min-width: $media992) {
         justify-content: center;
-        p, h1{
+        p,
+        h1 {
             margin-bottom: 0;
             text-align: left;
         }
     }
 
-    
-    @media(min-width: $media1200){
+    @media (min-width: $media1200) {
         justify-content: center;
-        h1{
+        h1 {
             padding-right: 15%;
             text-align: left;
             font-size: 3em;
         }
 
-        p{
+        p {
             font-size: 1em;
         }
     }
 }
 
-.section-introduction__title{
+.section-introduction__title {
     font-weight: bolder;
-    @media (min-width: $media992){
-        font-size: 2.5em;        
+    @media (min-width: $media992) {
+        font-size: 2.5em;
     }
 }
 
-.section-introduction__text{
-    @media (min-width: $media992){
-        font-size: 0.80em;
+.section-introduction__text {
+    @media (min-width: $media992) {
+        font-size: 0.8em;
         padding-top: 3%;
     }
 }
 
-.section-form{
+//form area 
+.section-form {
     grid-area: form-signup;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
@@ -134,51 +134,49 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    @media (min-width: $media768){
+    @media (min-width: $media768) {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
         justify-content: center;
         align-items: center;
-        border:$borda;
     }
 }
 
-.section-form__button{
-    width:  90%;
+.section-form__button {
+    width: 90%;
     height: 15%;
     border-radius: 4%;
     background-color: hsl(248, 32%, 49%);
     color: white;
     border: none;
     margin-bottom: 7%;
+    box-shadow: 0 7px 0px rgba(48, 3, 3, 0.15);
 
-    p{
+    p {
         width: 60%;
         text-align: center;
         margin: 0 auto;
         line-height: 1.75em;
-        span{
+        span {
             color: hsl(246, 25%, 77%);
         }
     }
 
     @media (min-width: $media768) {
-        p{
+        p {
             width: 80%;
-
         }
     }
     @media (min-width: $media992) {
         margin-bottom: 4%;
         height: 10%;
-        p{
+        p {
             width: 100%;
-           
-        }    
+        }
     }
 }
 
-.section-form__form{
+.section-form__form {
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -188,17 +186,15 @@ main{
     border: none;
     border-radius: 2%;
     width: 90%;
-    
-    @media(min-width: $media768){
+
+    @media (min-width: $media768) {
         height: 75%;
-        border:$borda;
         justify-content: space-evenly;
     }
-
 }
 
-.section-form__form___inputs{
-    width: 90%; 
+.section-form__form___inputs {
+    width: 90%;
     height: 80%;
     margin-top: 7%;
     display: flex;
@@ -206,7 +202,7 @@ main{
     justify-content: flex-start;
 }
 
-.section-form__form___inputs____single-input{
+.section-form__form___inputs____single-input {
     width: 100%;
     height: 20%;
     font-weight: 600;
@@ -215,11 +211,11 @@ main{
     border-radius: 3%;
 }
 
-::-webkit-input-placeholder{
+::-webkit-input-placeholder {
     padding-left: 5%;
 }
 
-.section-form__form___button-send{
+.section-form__form___button-send {
     width: 100%;
     height: 20%;
     background-color: hsl(154, 59%, 51%);
@@ -228,41 +224,35 @@ main{
     border: none;
 }
 
-.section-form__form___text-disclaimer{
+.section-form__form___text-disclaimer {
     font-size: 0.75em;
     text-align: center;
     width: 75%;
     color: hsl(246, 25%, 77%);
-    span{
-        color:hsl(0, 100%, 74%);
+    span {
+        color: hsl(0, 100%, 74%);
         font-weight: 700;
     }
 
     @media (min-width: $media992) {
         font-size: 0.5em;
-        border:$borda;
     }
 }
 
-.erro{
+.erro {
     border-color: red;
     color: blue;
 }
 
-.mensagem-erro{
+.message-error {
     font-size: 10px;
-    margin-top: 5%;
     font-weight: 800;
     color: red;
-    border:$borda;
-
 }
 
-footer{
+footer {
     margin-top: 10%;
-    @media (min-width: $media768){
+    @media (min-width: $media768) {
         margin-top: 1%;
     }
 }
-
-

@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+   
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
 
@@ -44,14 +44,14 @@
     <section class="section-form">
       <button class="section-form__button"><p>Try it free 7 days <span>then $20/mo. thereafter</span></p></button>
       <div class="section-form__form">
-        <form class="section-form__form___inputs" onsubmit="validaForm(event)">
+        <form class="section-form__form___inputs" onsubmit="validateForm(event)">
           <input class="section-form__form___inputs____single-input" id="input_first-name" type="text" placeholder="First Name">
           <input class="section-form__form___inputs____single-input" id="input_last-name" type="text" placeholder="Last Name">
           <input class="section-form__form___inputs____single-input" id="input_email" type="email" placeholder="Email address">
           <input class="section-form__form___inputs____single-input" id="input_password" type="password" placeholder="Password">
           <button class="section-form__form___button-send">CLAIM YOUR FREE TRIAL</button>
         </form>
-          <p class="section-form__form__text-error">""</p>
+          <p class="section-form__form__text-error"></p>
           <p class="section-form__form___text-disclaimer">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
       </div>
 
@@ -62,10 +62,14 @@
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://andreif.carrd.co/">Andrei Ferreira</a>.
     </p>
   </footer>
 </body>
+
 <script src="./src/js/script.js"></script>
+<script src="./node_modules/sweetalert/sweetalert2.js"></script>
+
+
 
 </html>
